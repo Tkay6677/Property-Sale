@@ -7,13 +7,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIRIBASE_API_KEY ,
-  authDomain: "property-sell-401819.firebaseapp.com",
-  projectId: "property-sell-401819",
-  storageBucket: "property-sell-401819.appspot.com",
-  messagingSenderId: "588716927912",
-  appId: "1:588716927912:web:a6d64c89172800b05a4b9d",
-  measurementId: "G-NQ79YSEFBT"
+  apiKey: "AIzaSyCOnVLCNuPY40SPTZLqlFhF1MG5apbDPMo", //import.meta.env.VITE_FIRIBASE_API_KEY ,
+  authDomain: "realestate-b0838.firebaseapp.com",
+  projectId: "realestate-b0838",
+  storageBucket: "realestate-b0838.appspot.com",
+  messagingSenderId: "146691805383",
+  appId: "1:146691805383:web:3cb65160c336abf832aee2",
+  measurementId: "G-2YF3WZR7VQ",
 };
 
 // Initialize Firebase
