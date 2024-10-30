@@ -1,4 +1,3 @@
-
 import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
@@ -21,7 +20,6 @@ app.use(cookieParser());
 
 const expressServer = http.createServer(app);
 
-
 //Handling CORS origin
 if (process.env.NODE_ENV === "local") {
   app.use(
@@ -33,9 +31,9 @@ if (process.env.NODE_ENV === "local") {
 } else {
   app.use(
     cors({
-      origin:"*",
+      origin: "*",
       credentials: true,
-      methods:["GET","POST","PUT","PATCH","DELETE"]
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     })
   );
 }
@@ -91,11 +89,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-
-
-
-
-
 //----------------------------Handling Socket.io ------------------------------//
 
 //Handling CORS origin
@@ -103,19 +96,13 @@ export const io = new Server(expressServer, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://property-sell.vercel.app",
-      "https://property-sell-gjz462ec1-emoncr.vercel.app/",
+      "https://7fpnyz-5173.csb.app",
       "http://localhost:3000",
-      "https://property-sell.onrender.com"
+      "https://primeliving.onrender.com",
     ],
     credentials: true,
   },
 });
-
-
-
-
-
 
 io.on("connection", (socket) => {
   console.log(`socket connected with ${socket.id}`);
@@ -134,14 +121,3 @@ io.on("connection", (socket) => {
     console.log(`user disconnected successfully ${socket.id}`);
   });
 });
-
-
-
-
-
-
-
-
-
-
-
